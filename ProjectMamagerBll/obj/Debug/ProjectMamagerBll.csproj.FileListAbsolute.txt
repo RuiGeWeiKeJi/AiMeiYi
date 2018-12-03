@@ -174,3 +174,7 @@ D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\bin\Debug\zh-Hans\DevExpr
 D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\obj\Debug\ProjectMamagerBll.csprojResolveAssemblyReference.cache
 D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\obj\Debug\ProjectMamagerBll.dll
 D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\obj\Debug\ProjectMamagerBll.pdb
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectMamagerBll\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll

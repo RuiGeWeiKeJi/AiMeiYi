@@ -16,41 +16,45 @@ namespace ProjectManage
     public partial class FormMain :FormBase
     {
         ProjectMamagerBll.Bll.MainBll _bllMain=null;
-        DataTable tableViewMain,tableViewDetail;
+        DataTable tableViewDetail,tableOne,tableTwo,tableTre;
 
-        public FormMain ( )
+        public FormMain ( string number )
         {
             InitializeComponent ( );
 
+            this . StartPosition = FormStartPosition . CenterParent;
 
             GridViewMoHuSelect . SetFilter ( gridView1 );
             GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { gridView1 } );
 
-            cardView1 . OptionsView . ShowQuickCustomizeButton = false;
-
             _bllMain = new ProjectMamagerBll . Bll . MainBll ( );
-
-            readProject ( );
-        }
-
-        void readProject ( )
-        {
-            tableViewMain = _bllMain . getTableForMain ( );
-            gridControl1 . DataSource = tableViewMain;
+            readDetail ( number );
         }
 
         void readDetail ( string number )
         {
             tableViewDetail = _bllMain . getTableForDetail ( number );
             gridControl2 . DataSource = tableViewDetail;
-        }
 
-        private void cardView1_Click ( object sender ,EventArgs e )
-        {
-            DataRow row = cardView1 . GetFocusedDataRow ( );
-            if ( row == null )
-                return;
-            readDetail ( row [ "DKA001" ] . ToString ( ) );
+            tableOne = _bllMain . tableOne ( number );
+            if ( tableOne != null && tableOne . Rows . Count > 0 )
+            {
+                textLine1 . Text = tableOne . Rows [ 0 ] [ "X" ] . ToString ( );
+                textLine7 . Text = tableOne . Rows [ 0 ] [ "Y" ] . ToString ( );
+                textLine4 . Text = tableOne . Rows [ 0 ] [ "Z" ] . ToString ( );
+            }
+            tableTwo = _bllMain . tableTwo ( number );
+            if ( tableTwo != null && tableTwo . Rows . Count > 0 )
+            {
+                textLine2 . Text = tableTwo . Rows [ 0 ] [ "X" ] . ToString ( );
+                textLine6 . Text = tableTwo . Rows [ 0 ] [ "Y" ] . ToString ( );
+                textLine5 . Text = tableTwo . Rows [ 0 ] [ "Z" ] . ToString ( );
+            }
+            tableTre = _bllMain . tableTre ( number );
+            if ( tableTre != null && tableTre . Rows . Count > 0 )
+            {
+                textLine3 . Text = tableTre . Rows [ 0 ] [ "X" ] . ToString ( ) == "0" ? null : tableTre . Rows [ 0 ] [ "X" ] . ToString ( );
+            }
         }
 
         private void cardView1_CustomDrawCardCaption ( object sender ,DevExpress . XtraGrid . Views . Card . CardCaptionCustomDrawEventArgs e )

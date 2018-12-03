@@ -184,3 +184,6 @@ D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\obj\Debug\ProjectManage.FormB
 D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\obj\Debug\ProjectManage.FormMain.resources
 D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\obj\Debug\ProjectManage.Properties.Resources.resources
 D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\obj\Debug\ProjectManage.csproj.GenerateResource.Cache
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\obj\Debug\ProjectManage.FormDetail.resources
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\bin\Debug\ProjectManageControlUI.dll
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManage\bin\Debug\ProjectManageControlUI.pdb

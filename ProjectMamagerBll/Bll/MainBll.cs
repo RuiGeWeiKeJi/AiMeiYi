@@ -29,5 +29,20 @@ namespace ProjectMamagerBll . Bll
             return dal . save ( table );
         }
 
+        public DataTable tableOne ( string num )
+        {
+            return dal . tableOne ( num );
+        }
+
+        public DataTable tableTwo ( string num )
+        {
+            return dal . tableTwo ( num );
+        }
+
+        public DataTable tableTre ( string num )
+        {
+            return dal . tableTre ( num );
+        }
+
     }
 }

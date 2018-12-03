@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectMamagerBll", "Projec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManageUtils", "ProjectManageUtils\ProjectManageUtils.csproj", "{8BE39A5D-D0D1-48AE-A77C-67DAE0581980}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManageControlUI", "ProjectManageControlUI\ProjectManageControlUI.csproj", "{9E7C3868-4810-41AB-86AC-774ED5C9EC93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8BE39A5D-D0D1-48AE-A77C-67DAE0581980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE39A5D-D0D1-48AE-A77C-67DAE0581980}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE39A5D-D0D1-48AE-A77C-67DAE0581980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7C3868-4810-41AB-86AC-774ED5C9EC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7C3868-4810-41AB-86AC-774ED5C9EC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7C3868-4810-41AB-86AC-774ED5C9EC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7C3868-4810-41AB-86AC-774ED5C9EC93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

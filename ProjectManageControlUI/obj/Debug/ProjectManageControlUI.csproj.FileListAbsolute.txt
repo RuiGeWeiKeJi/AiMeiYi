@@ -1,0 +1,5 @@
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManageControlUI\bin\Debug\ProjectManageControlUI.dll
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManageControlUI\bin\Debug\ProjectManageControlUI.pdb
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManageControlUI\obj\Debug\ProjectManageControlUI.csprojResolveAssemblyReference.cache
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManageControlUI\obj\Debug\ProjectManageControlUI.dll
+D:\ProjectData\AiMeiYi\ProjectManage\ProjectManageControlUI\obj\Debug\ProjectManageControlUI.pdb

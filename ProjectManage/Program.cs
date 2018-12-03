@@ -22,7 +22,7 @@ namespace ProjectManage
             BonusSkins . Register ( );
             SkinManager . EnableFormSkins ( );
             UserLookAndFeel . Default . SetSkinStyle ( "DevExpress Style" );
-            Application . Run ( new FormMain ( ) );
+            Application . Run ( new FormDetail ( ) );
         }
     }
 }
