@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            this . SuspendLayout ( );
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
+            this.SuspendLayout();
             // 
-            // Form1
+            // FormBase
             // 
-            this . AutoScaleDimensions = new System . Drawing . SizeF ( 6F ,13F );
-            this . AutoScaleMode = System . Windows . Forms . AutoScaleMode . Font;
-            this . ClientSize = new System . Drawing . Size ( 632 ,278 );
-            this . Name = "Form1";
-            this . Text = "Form1";
-            this . ResumeLayout ( false );
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(737, 299);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormBase";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
 
         }
 

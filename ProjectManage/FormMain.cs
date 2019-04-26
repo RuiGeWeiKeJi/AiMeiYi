@@ -41,15 +41,15 @@ namespace ProjectManage
             {
                 textLine1 . Text = tableOne . Rows [ 0 ] [ "X" ] . ToString ( );
                 textLine7 . Text = tableOne . Rows [ 0 ] [ "Y" ] . ToString ( );
-                textLine4 . Text = tableOne . Rows [ 0 ] [ "Z" ] . ToString ( );
+                //textLine4 . Text = tableOne . Rows [ 0 ] [ "Z" ] . ToString ( );
             }
-            tableTwo = _bllMain . tableTwo ( number );
-            if ( tableTwo != null && tableTwo . Rows . Count > 0 )
-            {
-                textLine2 . Text = tableTwo . Rows [ 0 ] [ "X" ] . ToString ( );
-                textLine6 . Text = tableTwo . Rows [ 0 ] [ "Y" ] . ToString ( );
-                textLine5 . Text = tableTwo . Rows [ 0 ] [ "Z" ] . ToString ( );
-            }
+            //tableTwo = _bllMain . tableTwo ( number );
+            //if ( tableTwo != null && tableTwo . Rows . Count > 0 )
+            //{
+            //    textLine2 . Text = tableTwo . Rows [ 0 ] [ "X" ] . ToString ( );
+            //    textLine6 . Text = tableTwo . Rows [ 0 ] [ "Y" ] . ToString ( );
+            //    textLine5 . Text = tableTwo . Rows [ 0 ] [ "Z" ] . ToString ( );
+            //}
             tableTre = _bllMain . tableTre ( number );
             if ( tableTre != null && tableTre . Rows . Count > 0 )
             {

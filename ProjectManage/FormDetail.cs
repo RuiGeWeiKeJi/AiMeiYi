@@ -42,31 +42,30 @@ namespace ProjectManage
         void addButton ( int num,string text,string tag )
         {
             //每行5个
-            int x = 0, y = 0, width = 120, height = 89;
+            int x = 0, y = 0, width = 150, height = 89;
             if ( num == 0 )
             {
                 //第一个
                 x = 29;
-                y = 23;
+                y = 5 * 2 + 89;
             }
             else if ( num != 0 && num / 5 < 1 )
             {
                 //第一行  2-5
-                x = ( num + 1 ) * 29 + num * 120;
-                y = 23;
+                x = ( num + 1 ) * 29 + num * 150;
+                y = 5 * 2 + 89;
             }
             else if ( num != 0 && num / 5 >= 1 )
             {
                 //其它行  从第二行开始
-                x = ( num % 5 + 1 ) * 29 + num % 5 * 120;
-                y = ( num / 5 + 1 ) * 23 + num / 5 * 89;
+                x = ( num % 5 + 1 ) * 29 + num % 5 * 150;
+                y = ( num / 5 + 1 ) * 5 * 2+89 + num / 5 * 89;
             }
             string name = "btn" + num;
             Button btn = new Button ( );
             btn . FlatAppearance . BorderColor = System . Drawing . Color . FromArgb ( ( ( int ) ( ( ( byte ) ( 0 ) ) ) ) ,( ( int ) ( ( ( byte ) ( 0 ) ) ) ) ,( ( int ) ( ( ( byte ) ( 0 ) ) ) ) ,( ( int ) ( ( ( byte ) ( 0 ) ) ) ) );
             btn . FlatAppearance . BorderSize = 0;
             btn . FlatAppearance . MouseDownBackColor = System . Drawing . Color . Transparent;
-            btn . FlatAppearance . MouseOverBackColor = System . Drawing . Color . Transparent;
             btn . FlatStyle = System . Windows . Forms . FlatStyle . Flat;
             btn . Location = new System . Drawing . Point ( x ,y );
             btn . Name = name;
@@ -92,7 +91,7 @@ namespace ProjectManage
 
         private void btn_Paint ( object sender ,PaintEventArgs e )
         {
-            Draw ( e . ClipRectangle ,e . Graphics ,18 ,false ,Color . White ,Color . LightGreen );
+            Draw ( e . ClipRectangle ,e . Graphics ,18 ,false ,Color . WhiteSmoke ,Color . WhiteSmoke );
 
             base . OnPaint ( e );
 
@@ -114,6 +113,13 @@ namespace ProjectManage
             LinearGradientBrush myLinearGradientBrush = new LinearGradientBrush ( rectangle ,begin_color ,end_color ,LinearGradientMode . Vertical );
             //填充
             g . FillPath ( myLinearGradientBrush ,DrawRoundRect ( rectangle . X ,rectangle . Y ,rectangle . Width - span ,rectangle . Height - 1 ,_radius ) );
+
+            //ControlPaint . DrawBorder ( g ,rectangle ,
+            //    Color . LightSalmon ,1 ,ButtonBorderStyle . Solid ,
+            //    Color . LightSalmon ,1 ,ButtonBorderStyle . Solid ,
+            //    Color . LightSalmon ,1 ,ButtonBorderStyle . Solid ,
+            //    Color . LightSalmon ,1 ,ButtonBorderStyle . Solid
+            //    );
         }
 
         public static GraphicsPath DrawRoundRect ( int x ,int y ,int width ,int height ,int radius )
@@ -128,5 +134,36 @@ namespace ProjectManage
             return gp;
         }
 
+        private void DrawLine ( Graphics graphics ,Control control )
+        {
+            float X = float . Parse ( control . Width . ToString ( ) ) - 1;
+            float Y = float . Parse ( control . Height . ToString ( ) ) - 1;
+            PointF [ ] pointfs = {
+                new PointF(8,     0),
+                new PointF(X-8,   0),
+                new PointF(X-4,   4),
+                new PointF(X,     8),
+                new PointF(X,     Y-8),
+                new PointF(X-4,   Y-4),
+                new PointF(X-8,   Y),
+                new PointF(8,     Y),
+                new PointF(4,     Y-4),
+                new PointF(0,     Y-8),
+                new PointF(0,     8),
+                new PointF(4,     4)
+                };
+
+            GraphicsPath path = new GraphicsPath ( );
+            path . AddLines ( pointfs );
+
+            Pen pen = new Pen ( Color . FromArgb ( 150 ,Color . Blue ) ,1 );
+            pen . DashStyle = DashStyle . Solid;
+            graphics . DrawPath ( pen ,path );
+        }
+
+        private void panel1_Paint ( object sender ,PaintEventArgs e )
+        {
+
+        }
     }
 }
